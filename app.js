@@ -15,3 +15,7 @@ app.use("/users", usersRouter);
 app.listen(port, () => {
   console.log(`Server is listening on ${port}`);
 });
+
+app.get("/", (req, res) => {
+  res.status(200).send("Webhook is listening");
+});
